@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Your AllSkills Learning Dashboard">
+  <title>AllSkills | Dashboard</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+
+<div class="dashboard">
+
+  <!-- FIXED LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <div class="side-head">
+      <img src="img/Skills.png" alt="AllSkills logo">
+      <h2>AllSkills</h2>
+    </div>
+
+    <div class="side-profile">
+      <div class="avatar">U</div>
+      <div>
+        <strong>My Account</strong>
+        <small>Learner</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#view-dashboard"><span>⌂</span><b>Dashboard</b></a>
+      <a href="#view-myskills"><span>▣</span><b>My Skills</b></a>
+      <a href="#view-learning"><span>▤</span><b>My Learning</b></a>
+      <a href="#view-goals"><span>◎</span><b>Learning Goals</b></a>
+      <a href="#view-progress"><span>▥</span><b>My Progress</b></a>
+      <a href="#view-achievements"><span>✧</span><b>Achievements</b></a>
+      <a href="#view-profile"><span>♙</span><b>My Profile</b></a>
+      <a href="#view-settings"><span>⚙</span><b>Settings</b></a>
+    </nav>
+
+    <div class="side-bottom">
+      <a href="index.html"><span>↪</span><b>Sign Out</b></a>
+    </div>
+  </aside>
+
+  <label for="menu-toggle" class="sidebar-overlay"></label>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <header class="topbar">
+      <div class="top-left">
+        <label for="menu-toggle" class="top-menu">☰</label>
+        <h2>AllSkills Dashboard</h2>
+      </div>
+      <div class="top-right">
+        <a href="#view-notifications" class="notification">Notifications</a>
+      </div>
+    </header>
+
+    <!-- DASHBOARD HOME -->
+    <div class="view" id="view-dashboard">
+      <section class="welcome">
+        <h1>Welcome to Your Learning Space</h1>
+        <p>
+          Your journey towards developing new skills starts here. Choose a skill, follow your learning path and track your progress as you grow.
+        </p>
+      </section>
+
+      <section class="overview">
+        <h2>Learning Overview</h2>
+        <div class="overview-grid">
+          <div class="stat-card"><p>Enrolled Skills</p><h2 id="total-skills">—</h2></div>
+          <div class="stat-card"><p>Completed Skills</p><h2 id="completed-skills">—</h2></div>
+          <div class="stat-card"><p>Active Learning</p><h2 id="active-skills">—</h2></div>
+          <div class="stat-card"><p>Overall Progress</p><h2 id="overall-progress">—</h2></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MY SKILLS -->
+    <section class="view dashboard-section" id="view-myskills">
+      <div class="section-heading">
+        <h2>My Skills</h2>
+        <a href="index.html#skills">Explore Skills +</a>
+      </div>
+      <div class="empty-state" id="skills-container">
+        <span class="empty-icon">✧</span>
+        <h3>Your Skills Will Appear Here</h3>
+        <p>You haven't enrolled in any skills yet. Explore available skills and start building your learning journey.</p>
+        <a href="index.html#skills" class="empty-button">Explore Skills</a>
+      </div>
+    </section>
+
+    <!-- MY LEARNING -->
+    <section class="view dashboard-section" id="view-learning">
+      <h2>Continue Learning</h2>
+      <div class="empty-state" id="learning-container">
+        <span class="empty-icon">▤</span>
+        <h3>No Active Learning Path</h3>
+        <p>Once you enrol in a skill, your learning stages will appear here. Complete each stage to unlock the next one.</p>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section class="view dashboard-section" id="view-goals">
+      <h2>My Learning Goals</h2>
+      <div class="empty-state" id="goals-container">
+        <span class="empty-icon">◎</span>
+        <h3>Your Goals Will Appear Here</h3>
+        <p>Your learning objectives and targets will be displayed here.</p>
+      </div>
+    </section>
+
+    <!-- PROGRESS -->
+    <section class="view dashboard-section" id="view-progress">
+      <h2>Track Your Progress</h2>
+      <div class="empty-state" id="progress-container">
+        <span class="empty-icon">▥</span>
+        <h3>Your Progress Starts Here</h3>
+        <p>As you complete learning stages, your progress will be calculated and displayed here.</p>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="view dashboard-section" id="view-achievements">
+      <h2>Achievements</h2>
+      <div class="empty-state" id="achievements-container">
+        <span class="empty-icon">✧</span>
+        <h3>No Achievements Yet</h3>
+        <p>Your completed skills and learning milestones will be recognised here.</p>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="view dashboard-section" id="view-profile">
+      <h2>My Profile</h2>
+      <div class="empty-state" id="profile-container">
+        <span class="empty-icon">♙</span>
+        <h3>Your Profile</h3>
+        <p>Your personal information and account details will appear here.</p>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="view dashboard-section" id="view-settings">
+      <h2>Settings</h2>
+      <div class="empty-state">
+        <h3>Account Settings</h3>
+        <p>Manage your account preferences and learning settings here.</p>
+      </div>
+    </section>
+
+    <!-- NOTIFICATIONS -->
+    <section class="view dashboard-section" id="view-notifications">
+      <h2>Notifications</h2>
+      <div class="empty-state">
+        <h3>No Notifications</h3>
+        <p>Your learning updates and notifications will appear here.</p>
+      </div>
+    </section>
+
+    <footer class="dashboard-footer">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Skill overview and learning stages on AllSkills.">
+  <title>AllSkills | Skill</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/skills.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="app-header">
+    <a href="index.html" class="brand">
+      <img src="img/Skills.png" alt="AllSkills logo">
+      <span>AllSkills</span>
+    </a>
+    <a href="dashboard.html" class="exit">Back to Dashboard</a>
+  </header>
+
+  <main class="page-wrap">
+
+  <p class="breadcrumb">
+    <a href="dashboard.html">Dashboard</a> &rsaquo; <span id="crumb-skill">Skill</span>
+  </p>
+
+  <!-- SKILL OVERVIEW (JavaScript fills these in) -->
+  <section class="skill-hero">
+    <span class="tag" id="skill-category">Loading...</span>
+    <h1 id="skill-title">Loading...</h1>
+    <p id="skill-desc"></p>
+
+    <div class="progress-info">
+      <span>Progress</span>
+      <span id="skill-percent">0%</span>
+    </div>
+    <div class="progress-bar large"><div id="skill-bar" style="width:0%"></div></div>
+
+    <a href="lesson.html" class="continue" id="start-btn">Start Learning</a>
+  </section>
+
+  <!-- LEARNING STAGES (JavaScript builds this list) -->
+  <section class="stage-section">
+    <h2>Learning Stages</h2>
+    <div class="stage-list" id="stage-list"></div>
+  </section>
+
+</main>
+
+  <footer class="app-footer">
+    <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

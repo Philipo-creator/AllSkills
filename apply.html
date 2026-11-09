@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Apply to AllSkills and choose the skills you want to learn.">
+  <title>AllSkills | Apply</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/apply.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <a href="index.html" class="brand">
+      <img src="img/Skills.png" alt="AllSkills logo">
+      <span>AllSkills</span>
+    </a>
+    <a href="index.html" class="exit">Back to Home</a>
+  </header>
+
+  <main class="application">
+
+    <!-- INTRO -->
+    <section class="apply-intro">
+      <h1>Apply to AllSkills</h1>
+      <p>
+        Tell us a little about yourself, choose the skills you want to learn
+        and start your journey. It only takes a few minutes.
+      </p>
+    </section>
+
+    <form id="apply-form" action="success.html" method="get">
+
+      <!-- 1. ACCOUNT DETAILS -->
+      <section class="form-section">
+        <h2>1. Your Account</h2>
+        <p>Create the login details you will use to enter your dashboard.</p>
+
+        <div class="form-grid">
+          <div>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+          </div>
+          <div>
+            <label for="confirm">Confirm Password</label>
+            <input type="password" id="confirm" name="confirm" placeholder="Repeat your password" minlength="8" required>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. PERSONAL DETAILS -->
+      <section class="form-section">
+        <h2>2. About You</h2>
+        <p>This helps us shape your learning experience.</p>
+
+        <div class="form-grid">
+          <div>
+            <label for="age">Age Group</label>
+            <select id="age" name="age" required>
+              <option value="">Select your age group</option>
+              <option>Under 18</option>
+              <option>18 - 24</option>
+              <option>25 - 34</option>
+              <option>35 - 44</option>
+              <option>45 and above</option>
+            </select>
+          </div>
+          <div>
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="Your country" required>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. SKILL SELECTION -->
+      <section class="form-section">
+        <h2>3. Choose Your Skills</h2>
+        <p>Select one or more skills you would like to learn.</p>
+
+        <div class="skill-selection">
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="technology">
+            <span><strong>Technology &amp; Programming</strong><small>Web, software, AI and data</small></span>
+          </label>
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="design">
+            <span><strong>Design &amp; Creativity</strong><small>Graphics, UI/UX and photography</small></span>
+          </label>
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="business">
+            <span><strong>Business &amp; Entrepreneurship</strong><small>Management, marketing and sales</small></span>
+          </label>
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="finance">
+            <span><strong>Finance &amp; Accounting</strong><small>Budgeting, accounting and investing</small></span>
+          </label>
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="communication">
+            <span><strong>Communication &amp; Leadership</strong><small>Speaking, writing and leading</small></span>
+          </label>
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="personal">
+            <span><strong>Personal Development</strong><small>Time, focus and problem solving</small></span>
+          </label>
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="digital">
+            <span><strong>Digital Skills</strong><small>Marketing, content and social media</small></span>
+          </label>
+          <label class="skill-option">
+            <input type="checkbox" name="skills" value="practical">
+            <span><strong>Practical &amp; Technical Skills</strong><small>Electrical, carpentry, fashion and more</small></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- 4. LEARNING LEVEL -->
+      <section class="form-section">
+        <h2>4. Your Learning Level</h2>
+        <p>Choose the level that best describes you right now.</p>
+
+        <div class="level-selection">
+          <label>
+            <input type="radio" name="level" value="beginner" required>
+            <span><strong>Beginner</strong><small>I am just starting out</small></span>
+          </label>
+          <label>
+            <input type="radio" name="level" value="intermediate">
+            <span><strong>Intermediate</strong><small>I know the basics</small></span>
+          </label>
+          <label>
+            <input type="radio" name="level" value="advanced">
+            <span><strong>Advanced</strong><small>I want to go deeper</small></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- 5. GOALS -->
+      <section class="form-section">
+        <h2>5. Your Goals</h2>
+        <p>Tell us how much time you have and what you hope to achieve.</p>
+
+        <div>
+          <label for="time">Weekly Learning Time</label>
+          <select id="time" name="time" required>
+            <option value="">Select hours per week</option>
+            <option>1 - 3 hours</option>
+            <option>4 - 7 hours</option>
+            <option>8 - 14 hours</option>
+            <option>15 hours or more</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="goal">What do you want to achieve?</label>
+          <textarea id="goal" name="goal" rows="4" placeholder="For example: build websites, start a business, get a job..."></textarea>
+        </div>
+      </section>
+
+      <!-- SUBMIT -->
+      <section class="submit-section">
+        <h2>Ready to Begin?</h2>
+        <p>
+          Review your answers, then submit your application
+          to enter your learning dashboard.
+        </p>
+        <button type="submit">Submit Application</button>
+      </section>
+
+    </form>
+  </main>
+
+  <footer class="app-footer">
+    <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

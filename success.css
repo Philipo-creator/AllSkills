@@ -1,0 +1,254 @@
+/* ========== BASE: shared by every page ========== */
+:root {
+  --sky-blue: #98D2EB;
+  --ice-blue: #E1F2FE;
+  --lavender: #B2B1CF;
+  --muted-brown: #77625C;
+  --dark-brown: #49392C;
+
+  --cream: #F8F6F2;
+  --beige: #E8DDD2;
+  --deep-blue: #285C75;
+  --soft-grey: #D5D0D8;
+
+  --text-dark: #302923;
+  --text-light: #FFFFFF;
+  --text-grey: #77625C;
+
+  --border: #D8D0C8;
+  --shadow: rgba(73, 57, 44, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--sky-blue),
+    var(--ice-blue),
+    var(--lavender),
+    var(--muted-brown)
+  );
+  color: var(--text-dark);
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-brown);
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+/* Simple header and footer (apply, login, forgot, success, skill, lesson) */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: var(--cream);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  color: var(--dark-brown);
+}
+
+.brand img {
+  width: 30px;
+  height: 30px;
+}
+
+.exit {
+  color: var(--dark-brown);
+}
+
+.app-footer {
+  background: var(--dark-brown);
+  text-align: center;
+  padding: 25px;
+  color: var(--cream);
+}
+
+/* ========== SKILL PAGE (also shared with lesson page) ========== */
+.page-wrap {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px 50px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--text-grey);
+}
+
+.breadcrumb a {
+  color: var(--deep-blue);
+  font-weight: bold;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--ice-blue);
+  color: var(--deep-blue);
+  margin-bottom: 15px;
+}
+
+.skill-hero {
+  background: rgba(248, 246, 242, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.skill-hero h1 {
+  font-size: 30px;
+  color: var(--dark-brown);
+  margin-bottom: 12px;
+}
+
+.skill-hero > p {
+  color: var(--text-grey);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--text-grey);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  height: 7px;
+  background: var(--soft-grey);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: var(--deep-blue);
+  border-radius: 10px;
+}
+
+.progress-bar.large {
+  height: 12px;
+}
+
+.continue {
+  display: block;
+  text-align: center;
+  padding: 11px;
+  background: var(--dark-brown);
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.continue:hover {
+  background: var(--muted-brown);
+}
+
+.stage-section {
+  margin-top: 30px;
+}
+
+.stage-section h2 {
+  color: var(--dark-brown);
+  margin-bottom: 18px;
+}
+
+.stage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stage-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.stage-link:hover {
+  border-color: var(--deep-blue);
+}
+
+.stage-link b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--deep-blue);
+  color: white;
+}
+
+.stage-link span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.stage-link strong {
+  color: var(--dark-brown);
+}
+
+.stage-link small {
+  color: var(--text-grey);
+}
+
+.stage-link em {
+  font-style: normal;
+  font-size: 13px;
+  color: var(--deep-blue);
+  font-weight: bold;
+}
+
+.stage-link.locked {
+  opacity: 0.6;
+}
+
+.stage-link.locked b {
+  background: var(--muted-brown);
+}
+
+@media (max-width: 450px) {
+  .skill-hero { padding: 20px; }
+  .skill-hero h1 { font-size: 24px; }
+}

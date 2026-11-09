@@ -1,0 +1,217 @@
+/* ========== BASE: shared by every page ========== */
+:root {
+  --sky-blue: #98D2EB;
+  --ice-blue: #E1F2FE;
+  --lavender: #B2B1CF;
+  --muted-brown: #77625C;
+  --dark-brown: #49392C;
+
+  --cream: #F8F6F2;
+  --beige: #E8DDD2;
+  --deep-blue: #285C75;
+  --soft-grey: #D5D0D8;
+
+  --text-dark: #302923;
+  --text-light: #FFFFFF;
+  --text-grey: #77625C;
+
+  --border: #D8D0C8;
+  --shadow: rgba(73, 57, 44, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--sky-blue),
+    var(--ice-blue),
+    var(--lavender),
+    var(--muted-brown)
+  );
+  color: var(--text-dark);
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-brown);
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+/* ========== SUCCESS PAGE (extras on top of login.css) ========== */
+.success-card {
+  text-align: center;
+}
+
+.success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--deep-blue);
+  color: white;
+  font-size: 34px;
+}
+
+.success-button {
+  display: inline-block;
+  padding: 14px 24px;
+  background: var(--dark-brown);
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.success-button:hover {
+  background: var(--muted-brown);
+}
+/* Simple header and footer (apply, login, forgot, success, skill, lesson) */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: var(--cream);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  color: var(--dark-brown);
+}
+
+.brand img {
+  width: 30px;
+  height: 30px;
+}
+
+.exit {
+  color: var(--dark-brown);
+}
+
+.app-footer {
+  background: var(--dark-brown);
+  text-align: center;
+  padding: 25px;
+  color: var(--cream);
+}
+
+/* ========== LOGIN, FORGOT PASSWORD AND SUCCESS CARD ========== */
+.login-wrap {
+  min-height: calc(120vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background: rgba(248, 246, 242, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 35px 30px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.login-card h1 {
+  font-size: 28px;
+  color: var(--dark-brown);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-sub {
+  text-align: center;
+  color: var(--text-grey);
+  margin-bottom: 25px;
+}
+
+.login-card form div {
+  margin-bottom: 18px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.login-card input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 13px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: var(--deep-blue);
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.login-options .remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.login-options a,
+.login-switch a {
+  color: var(--deep-blue);
+  font-weight: bold;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: var(--dark-brown);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: var(--muted-brown);
+}
+
+.login-switch {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-grey);
+}

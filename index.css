@@ -1,0 +1,469 @@
+/* ========== BASE: shared by every page ========== */
+:root {
+  --sky-blue: #98D2EB;
+  --ice-blue: #E1F2FE;
+  --lavender: #B2B1CF;
+  --muted-brown: #77625C;
+  --dark-brown: #49392C;
+
+  --cream: #F8F6F2;
+  --beige: #E8DDD2;
+  --deep-blue: #285C75;
+  --soft-grey: #D5D0D8;
+
+  --text-dark: #302923;
+  --text-light: #FFFFFF;
+  --text-grey: #77625C;
+
+  --border: #D8D0C8;
+  --shadow: rgba(73, 57, 44, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--sky-blue),
+    var(--ice-blue),
+    var(--lavender),
+    var(--muted-brown)
+  );
+  color: var(--text-dark);
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-brown);
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+/* Simple header and footer (apply, login, forgot, success, skill, lesson) */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: var(--cream);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  color: var(--dark-brown);
+}
+
+.brand img {
+  width: 30px;
+  height: 30px;
+}
+
+.exit {
+  color: var(--dark-brown);
+}
+
+.app-footer {
+  background: var(--dark-brown);
+  text-align: center;
+  padding: 25px;
+  color: var(--cream);
+}
+
+/* ========== INDEX (HOME) PAGE ========== */
+
+/* Header and menu */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.head {
+  padding: 10px 4px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--cream);
+  color: var(--dark-brown);
+}
+
+.head a {
+  background: var(--dark-brown);
+  color: var(--text-light);
+  border: 1px solid var(--dark-brown);
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.head a:hover {
+  background: var(--muted-brown);
+}
+
+.head p {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.skillsimg {
+  height: 25px;
+  width: 25px;
+}
+
+header nav {
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  background: var(--dark-brown);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4px 0;
+}
+
+header nav a {
+  color: var(--ice-blue);
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+header nav a:hover {
+  background: var(--muted-brown);
+}
+
+header nav a.current {
+  background: var(--ice-blue);
+  color: var(--dark-brown);
+}
+
+/* General sections */
+section:not(.intro) {
+  padding: 40px 7%;
+}
+
+section h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--dark-brown);
+  margin-bottom: 10px;
+}
+
+section p {
+  line-height: 1.7;
+}
+
+.subheading {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Hero */
+.intro {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.BG {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.content {
+  margin: 30px;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: var(--dark-brown);
+  color: var(--text-light);
+  padding: 12px 22px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background: var(--muted-brown);
+}
+
+/* Boxes and grids */
+.welcome {
+  text-align: center;
+}
+
+.offerbox,
+.categorybox,
+.whybox,
+.howbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box {
+  flex: 1 1 220px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.box h3 {
+  font-size: 20px;
+  color: var(--deep-blue);
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 12px;
+}
+
+.categorybox .box {
+  flex: 1 1 250px;
+}
+
+.servicecategories {
+  text-align: center;
+}
+
+.servicecategories ul {
+  margin: 15px 0 0 20px;
+  line-height: 1.9;
+  text-align: left;
+  font-size: 13px;
+}
+
+.why p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.howbox .box {
+  border-bottom: 4px solid var(--lavender);
+}
+
+/* About */
+.pageintro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 8%;
+  scroll-margin-top: 100px;
+}
+
+.introtext {
+  flex: 1 1 300px;
+}
+
+.introtag {
+  color: var(--dark-brown);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.introtext h1 {
+  font-size: 38px;
+  color: var(--dark-brown);
+  margin: 15px 0;
+}
+
+.introtext p {
+  max-width: 550px;
+  line-height: 1.8;
+}
+
+.introimage {
+  flex: 1 1 250px;
+}
+
+.introimage img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.mission {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mission .box {
+  min-width: 220px;
+}
+
+.mission .box h2 {
+  font-size: 22px;
+}
+
+/* Contact form */
+.contactform > p {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+form {
+  margin: auto;
+}
+
+form div {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 5px;
+  background: var(--dark-brown);
+  color: white;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+button:hover {
+  background: var(--muted-brown);
+}
+
+/* FAQ */
+details {
+  margin: 12px auto;
+  padding: 15px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--dark-brown);
+}
+
+details p {
+  margin-top: 12px;
+}
+
+/* Final call to action */
+.apply {
+  color: var(--text-light);
+}
+
+.apply h2 {
+  color: var(--text-light);
+}
+
+.apply p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bolder;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+/* Footer */
+footer {
+  padding: 10px;
+  background: var(--dark-brown);
+  color: var(--cream);
+}
+
+footer p {
+  line-height: 1.5;
+  color: var(--cream);
+  margin: 4px;
+}
+
+footer a {
+  padding: 12px 0;
+}
+
+.back {
+  text-transform: uppercase;
+  background: var(--cream);
+  color: var(--dark-brown);
+  padding: 2px;
+  border-radius: 5px;
+  width: 25%;
+  text-align: center;
+  margin: 4px;
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+  .head p { font-size: 18px; }
+  .back { width: 50%; }
+  .introtext h1 { font-size: 28px; }
+}

@@ -1,0 +1,274 @@
+/* ========== BASE: shared by every page ========== */
+:root {
+  --sky-blue: #98D2EB;
+  --ice-blue: #E1F2FE;
+  --lavender: #B2B1CF;
+  --muted-brown: #77625C;
+  --dark-brown: #49392C;
+
+  --cream: #F8F6F2;
+  --beige: #E8DDD2;
+  --deep-blue: #285C75;
+  --soft-grey: #D5D0D8;
+
+  --text-dark: #302923;
+  --text-light: #FFFFFF;
+  --text-grey: #77625C;
+
+  --border: #D8D0C8;
+  --shadow: rgba(73, 57, 44, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--sky-blue),
+    var(--ice-blue),
+    var(--lavender),
+    var(--muted-brown)
+  );
+  color: var(--text-dark);
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-brown);
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+/* Simple header and footer (apply, login, forgot, success, skill, lesson) */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: var(--cream);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  color: var(--dark-brown);
+}
+
+.brand img {
+  width: 30px;
+  height: 30px;
+}
+
+.exit {
+  text-transform:capitalize;
+  background: var(--dark-brown);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.app-footer {
+  background: var(--dark-brown);
+  text-align: center;
+  padding: 25px;
+  color: var(--cream);
+}
+/* ========== APPLY PAGE ========== */
+.application {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.apply-intro {
+  text-align: center;
+  padding: 35px 10px;
+}
+
+.apply-intro h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--dark-brown);
+}
+
+.apply-intro p {
+  color: var(--text-grey);
+  line-height: 1.7;
+}
+
+.form-section {
+  background: rgba(248, 246, 242, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.form-section h2 {
+  color: var(--dark-brown);
+  margin-bottom: 10px;
+}
+
+.form-section > p {
+  color: var(--text-grey);
+  margin-bottom: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-section input:not([type="checkbox"]):not([type="radio"]),
+.form-section select,
+.form-section textarea {
+  width: 100%;
+  padding: 13px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.form-section input:focus,
+.form-section textarea:focus,
+.form-section select:focus {
+  border-color: var(--deep-blue);
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+/* Skill selection */
+.skill-selection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.skill-option {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  padding: 17px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.skill-option input {
+  accent-color: var(--deep-blue);
+}
+
+.skill-option span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.skill-option small {
+  color: var(--text-grey);
+}
+
+/* Learning level */
+.level-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.level-selection label {
+  display: flex;
+  gap: 10px;
+  padding: 18px;
+  background: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.level-selection input {
+  accent-color: var(--deep-blue);
+}
+
+.level-selection span {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.level-selection small {
+  color: var(--text-grey);
+}
+
+/* Submit */
+.submit-section {
+  text-align: center;
+  padding: 40px 15px;
+}
+
+.submit-section h2 {
+  color: var(--dark-brown);
+  margin-bottom: 15px;
+}
+
+.submit-section p {
+  color: var(--text-grey);
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.submit-section button {
+  background: var(--dark-brown);
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-section button:hover {
+  background: var(--muted-brown);
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+  .form-grid,
+  .skill-selection,
+  .level-selection { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 450px) {
+  .form-section { padding: 20px; }
+}
+
